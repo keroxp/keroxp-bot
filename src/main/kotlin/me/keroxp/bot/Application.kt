@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody
 @SpringBootApplication
 @Controller
 open class Application : SpringApplication() {
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     @ResponseBody
     fun hello(): String = "hello, kotlin!"
 }
