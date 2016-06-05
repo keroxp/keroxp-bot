@@ -7,16 +7,18 @@ buildscript {
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.0.1"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:1.3.0.RELEASE"
     }
 }
 
 apply plugin: 'application'
 apply plugin: 'kotlin'
+apply plugin: 'spring-boot'
 apply plugin: 'groovy'
 
 sourceCompatibility = 1.8
 
-mainClassName = "me.keroxp.bot.ApplicationKt"
+mainClassName = "me.keroxp.bot.Application"
 
 ext {
     kotlinVersion = "1.0.2"
@@ -41,9 +43,6 @@ task stage {
 }
 
 dependencies {
-    compile "com.linecorp.bot:line-bot-api-client:0.2.0"
-    compile "com.linecorp.bot:line-bot-model:0.2.0"
-    compile "com.linecorp.bot:line-bot-servlet:0.2.0"
     compile "com.linecorp.bot:line-bot-spring-boot:0.2.0"
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     compile "org.jetbrains.kotlin:kotlin-runtime:$kotlinVersion"
